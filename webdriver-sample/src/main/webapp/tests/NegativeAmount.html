@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Creation of account with negative amount</title>
+    <link rel="stylesheet" href="examples.css" type="text/css"/>
+</head>
+<body>
+<h2>Creation of account with negative amount</h2>
+
+<p>User can't create account with negative amount.</p>
+
+<div class="example">
+    <h3>Example:</h3>
+
+    <table cellpadding="1" cellspacing="1" border="1">
+        <thead>
+            <tr>
+                <td rowspan="1" colspan="3">Bob tries to create account with negative amount</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>open</td>
+                <td>/bank/</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>waitForPageToLoad</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>clickAndWait</td>
+                <td>link=Manage Accounts</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>user</td>
+                <td>Bob</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>amount</td>
+                <td>-2</td>
+            </tr>
+            <tr>
+                <td>clickAndWait</td>
+                <td>//input[@value='Create']</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>assertTextPresent</td>
+                <td>Amount must be positive</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

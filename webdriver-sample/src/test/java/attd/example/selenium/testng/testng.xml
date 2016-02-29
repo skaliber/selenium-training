@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="All Tests" parallel="methods" thread-count="5">
+  <test name="All Tests">
+    <packages>
+      <package name="attd.example.selenium.testng" />
+   </packages>
+ </test>
+</suite>

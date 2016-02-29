@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>Money operations</title>
+    <link rel="stylesheet" href="examples.css" type="text/css"/>
+</head>
+<body>
+<h2>Money operations</h2>
+
+<p>
+    User can perform money operation with two different
+    accounts to move positive amount of money from on to another.
+    User can't move more money than account has.
+</p>
+
+<div class="example">
+<h3>Example:</h3>
+
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+    <tr>
+        <td rowspan="1" colspan="3">John transfer to Bob 5 amount of money</td>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>open</td>
+        <td>/bank/</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>waitForPageToLoad</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>clickAndWait</td>
+        <td>link=Manage Accounts</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>user</td>
+        <td>Bob</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>amount</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>clickAndWait</td>
+        <td>//input[@value='Create']</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>user</td>
+        <td>John</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>amount</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>clickAndWait</td>
+        <td>//input[@value='Create']</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>clickAndWait</td>
+        <td>link=Main Menu</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>clickAndWait</td>
+        <td>link=Perform Operations</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>storeText</td>
+        <td>//tbody/tr[1]/td[1]</td>
+        <td>johnAccountId</td>
+    </tr>
+    <tr>
+        <td>storeText</td>
+        <td>//tbody/tr[2]/td[1]</td>
+        <td>bobAccountId</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>fromAccountId</td>
+        <td>${johnAccountId}</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>toAccountId</td>
+        <td>${bobAccountId}</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>amount</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>clickAndWait</td>
+        <td>//input[@value='Move']</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>assertText</td>
+        <td>//tbody/tr[1]/td[3]</td>
+        <td>3.0</td>
+    </tr>
+    <tr>
+        <td>assertText</td>
+        <td>//tbody/tr[2]/td[3]</td>
+        <td>14.0</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>General overview of the Bank application</title>
+</head>
+<body>
+    <h2>Bank Sample Application</h2>
+
+    <p>
+        Bank sample application is used to register user accounts and perform
+        simple operations with these accounts.
+    </p>
+
+    <h3>User stories:</h3>
+
+    <ul>
+        <li>I as User want to register my account in the Bank to save money on it and to perform money operations</li>
+        <li>I as User want to perform money operation from my account to another one to pay/receive money to/from another User</li>
+        <li>I as User want to get money from my account</li>
+        <li>I as User want to put some money on my account to perform money operations</li>
+    </ul>
+
+    <h3>Acceptance criteria:</h3>
+
+    <ul>
+        <li>Each account has unique identifier</li>
+        <li>Each User can create some accounts</li>
+        <li>Account can't have negative amount of money on it</li>
+        <li>After money operation one of the accounts is increased and another is decreased by the same amount of money</li>
+        <li>Each money operation must have positive budget</li>
+        <li>User can't get more money from account than it has</li>
+        <li>User can't get zero or negative amount of money</li>
+        <li>User can't put zero or negative amount of money</li>
+    </ul>
+
+    <h3>Acceptance tests:</h3>
+
+    <table cellpadding="1" cellspacing="1" border="1">
+        <tbody>
+            <tr>
+                <td>Available tests</td>
+            </tr>
+            <tr>
+                <td><a href="AddAccountTest.html">Create some accounts by one user</a></td>
+            </tr>
+            <tr>
+                <td><a href="MoneyOperation.html">Money operation</a></td>
+            </tr>
+            <tr>
+                <td><a href="NegativeAmount.html">Negative Amount</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

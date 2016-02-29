@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Creation of some accounts by one user</title>
+    <link rel="stylesheet" href="examples.css" type="text/css"/>
+</head>
+<body>
+<h2>Creation of some accounts by one user</h2>
+
+<p>Each user can create any number of accounts.</p>
+
+<div class="example">
+<h3>Example:</h3>
+<table cellpadding="1" cellspacing="1" border="1">
+    <thead>
+        <tr>
+            <td rowspan="1" colspan="3">User Bob creates 3 accounts</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>open</td>
+            <td>/bank/</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>waitForPageToLoad</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clickAndWait</td>
+            <td>link=Manage Accounts</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>user</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>amount</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>clickAndWait</td>
+            <td>//input[@value='Create']</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>assertText</td>
+            <td>//tbody/tr[1]/td[2]</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>assertText</td>
+            <td>//tbody/tr[1]/td[3]</td>
+            <td>3.0</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>user</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>amount</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>clickAndWait</td>
+            <td>//input[@value='Create']</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>assertText</td>
+            <td>//tbody/tr[1]/td[2]</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>assertText</td>
+            <td>//tbody/tr[1]/td[3]</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>user</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>amount</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>clickAndWait</td>
+            <td>//input[@value='Create']</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>assertText</td>
+            <td>//tbody/tr[1]/td[2]</td>
+            <td>Bob</td>
+        </tr>
+        <tr>
+            <td>assertText</td>
+            <td>//tbody/tr[1]/td[3]</td>
+            <td>0.0</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
